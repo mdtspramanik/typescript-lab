@@ -1,0 +1,26 @@
+{
+  "name": "typescript-lab",
+  "version": "1.0.0",
+  "description": "A collection of TypeScript experiments, utilities, and projects for learning, testing, and exploring modern TypeScript development practices.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdtspramanik/typescript-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mdtspramanik/typescript-lab/issues"
+  },
+  "homepage": "https://github.com/mdtspramanik/typescript-lab#readme",
+  "devDependencies": {
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}
