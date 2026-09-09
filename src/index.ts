@@ -6,35 +6,35 @@
 console.log("TypeScript is running!");
 
 // Define some variables with type annotations
-let userName: string = "John Doe";
-let userAge: number = 30;
-let isActive: boolean = true;
+let employeeName: string = "John Doe";
+let employeeAge: number = 30;
+let isWorking: boolean = true;
 
 // Log the variables to the console
 console.log(
-  `User Name: ${userName}\nUser Age: ${userAge}\nIs Active: ${isActive}`,
+  `Employee Name: ${employeeName}\nEmployee Age: ${employeeAge}\nIs Working: ${isWorking}`,
 );
 
 // Declaring variables without initial values
-let userCount: number;
+let employeeId: string;
 
 // Using union types to allow a variable to hold multiple types
-let selectedUser: string | null = null;
+let department: string | null = null;
 
 // Using an empty array with a specific type
-let userRoles: string[] = [];
+let employeeRoles: string[] = [];
 
-// Assigning a value to the previously declared variable "userCount"
-userCount = 5;
+// Assigning a value to the previously declared variable "employeeId"
+employeeId = "EMP001";
 
-// Assigning a value to the "selectedUser" variable
-selectedUser = "Jane Smith";
+// Assigning a value to the "department" variable
+department = "Engineering";
 
-// Adding roles to the "userRoles" array
-userRoles.push("admin");
-userRoles.push("editor");
+// Adding roles to the "employeeRoles" array
+employeeRoles.push("Developer");
+employeeRoles.push("Team Lead");
 
 // Log the updated variables to the console
 console.log(
-  `User Count: ${userCount}\nSelected User: ${selectedUser}\nUser Roles: ${userRoles.join(", ")}`,
+  `Employee ID: ${employeeId}\nDepartment: ${department}\nEmployee Roles: ${employeeRoles.join(", ")}`,
 );
