@@ -1,5 +1,5 @@
 /**
- * This is a simple TypeScript program that demonstrates basic type annotations and variable declarations.
+ * Type annotations and variable declarations
  */
 
 // Check if TypeScript is working
@@ -38,6 +38,10 @@ employeeRoles.push("Team Lead");
 console.log(
   `Employee ID: ${employeeId}\nDepartment: ${department}\nEmployee Roles: ${employeeRoles.join(", ")}`,
 );
+
+/**
+ * Functions
+ */
 
 // Function to calculate annual salary based on monthly salary and optional monthly bonus
 function calculateAnnualSalary(
