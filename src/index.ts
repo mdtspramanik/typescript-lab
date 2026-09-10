@@ -39,13 +39,32 @@ console.log(
   `Employee ID: ${employeeId}\nDepartment: ${department}\nEmployee Roles: ${employeeRoles.join(", ")}`,
 );
 
-// A function that calculates the annual salary based on a monthly salary
-function calculateAnnualSalary(monthlySalary: number): number {
-  return monthlySalary * 12;
+// Function to calculate annual salary based on monthly salary and optional monthly bonus
+function calculateAnnualSalary(
+  monthlySalary: number,
+  monthlyBonus: number = 0,
+): number {
+  return monthlySalary * 12 + monthlyBonus * 12;
 }
 
-// Calculate the annual salary for a given monthly salary
-const annualSalary = calculateAnnualSalary(1200);
+// Calculate the annual salary for an employee with a monthly salary of $1200 and a monthly bonus of $200
+const annualSalary = calculateAnnualSalary(1200, 200);
 
 // Log the annual salary to the console
 console.log(`Annual Salary: $${annualSalary}`);
+
+// Function to check if an employee is eligible for promotion based on age and years of experience
+const isEligibleForPromotion = (
+  age: number,
+  yearsOfExperience: number,
+): boolean => {
+  return age > 25 && yearsOfExperience >= 5;
+};
+
+// Check if the employee is eligible for promotion
+const eligibleForPromotion = isEligibleForPromotion(employeeAge, 6);
+
+// Log the eligibility for promotion to the console
+console.log(
+  `Is the employee eligible for promotion? ${eligibleForPromotion ? "Yes" : "No"}`,
+);
