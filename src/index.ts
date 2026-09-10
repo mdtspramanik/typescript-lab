@@ -38,3 +38,14 @@ employeeRoles.push("Team Lead");
 console.log(
   `Employee ID: ${employeeId}\nDepartment: ${department}\nEmployee Roles: ${employeeRoles.join(", ")}`,
 );
+
+// A function that calculates the annual salary based on a monthly salary
+function calculateAnnualSalary(monthlySalary: number): number {
+  return monthlySalary * 12;
+}
+
+// Calculate the annual salary for a given monthly salary
+const annualSalary = calculateAnnualSalary(1200);
+
+// Log the annual salary to the console
+console.log(`Annual Salary: $${annualSalary}`);
