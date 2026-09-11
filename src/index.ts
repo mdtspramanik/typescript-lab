@@ -126,3 +126,50 @@ let employeeLeaveDetails: {
 console.log(
   `Employee Leave Details: ${JSON.stringify(employeeLeaveDetails, null, 2)}`,
 );
+
+/**
+ * Interfaces and Types
+ */
+
+// Log a message to the console
+console.log("\n--- Department Information ---");
+
+// Define an interface for a department
+interface department {
+  name: string;
+  manager: string;
+  employees: string[];
+  isHiring?: boolean; // Optional property to indicate if the department is hiring
+}
+
+// Create objects for different departments using the department interface
+let engineeringDepartment: department = {
+  name: "Engineering",
+  manager: "Smith",
+  employees: ["John Doe", "Alice", "Bob"],
+  isHiring: true,
+};
+
+let hrDepartment: department = {
+  name: "Human Resources",
+  manager: "Johnson",
+  employees: ["Charlie", "David"],
+  isHiring: false,
+};
+
+let financeDepartment: department = {
+  name: "Finance",
+  manager: "Williams",
+  employees: ["Eve", "Frank"],
+};
+
+// Log the department information to the console
+console.log(
+  `Engineering Department: ${JSON.stringify(engineeringDepartment, null, 2)}`,
+);
+console.log(
+  `Human Resources Department: ${JSON.stringify(hrDepartment, null, 2)}`,
+);
+console.log(
+  `Finance Department: ${JSON.stringify(financeDepartment, null, 2)}`,
+);
