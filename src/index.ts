@@ -1,5 +1,5 @@
 /**
- * Type annotations and variable declarations
+ * Type Annotations & Variable Declarations
  */
 
 // Check if TypeScript is working
@@ -128,7 +128,7 @@ console.log(
 );
 
 /**
- * Interfaces and Types
+ * Interfaces
  */
 
 // Log a message to the console
