@@ -3,7 +3,10 @@
  */
 
 // Check if TypeScript is working
-console.log("TypeScript is running!");
+console.log("TypeScript is running!\n");
+
+// Log a message to the console
+console.log("--- Employee Information ---");
 
 // Define some variables with type annotations
 let employeeName: string = "John Doe";
@@ -71,4 +74,55 @@ const eligibleForPromotion = isEligibleForPromotion(employeeAge, 6);
 // Log the eligibility for promotion to the console
 console.log(
   `Is the employee eligible for promotion? ${eligibleForPromotion ? "Yes" : "No"}`,
+);
+
+/**
+ * Arrays, Tuples, and Objects
+ */
+
+// Log a message to the console
+console.log("\n--- Employee Leave Information ---");
+
+// Using an array to store names of employees on leave
+let employeeOnLeave: string[] = ["Alice", "Bob", "Charlie"];
+
+// Log the names of employees on leave to the console
+console.log(`Employees on leave: ${employeeOnLeave.join(", ")}`);
+
+// Using a tuple to store employee leave information (name and number of leave days)
+let employeeLeaveInfo: [string, number] = ["Alice", 1];
+
+// Log the employee leave information to the console
+console.log(
+  `Employee Leave Info: Name - ${employeeLeaveInfo[0]}, Leave Days - ${employeeLeaveInfo[1]}`,
+);
+
+// Using an object to store detailed information about an employee's leave
+let employeeLeaveDetails: {
+  name: string;
+  employeeId: string;
+  manager: string;
+  department: string;
+  leaveDays: number;
+  startDate: Date;
+  endDate: Date;
+  reason: string;
+  status: "approved" | "pending" | "rejected";
+  comments: string;
+} = {
+  name: "Alice",
+  employeeId: "EMP002",
+  manager: "Smith",
+  department: "Engineering",
+  leaveDays: 1,
+  startDate: new Date(),
+  endDate: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000), // Adding 1 day in milliseconds
+  reason: "Personal reasons",
+  status: "pending",
+  comments: "Please review and approve.",
+};
+
+// Log the employee leave details to the console
+console.log(
+  `Employee Leave Details: ${JSON.stringify(employeeLeaveDetails, null, 2)}`,
 );
