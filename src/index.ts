@@ -203,3 +203,32 @@ let budgetInfo: {
 
 // Log the budget information to the console
 console.log(`Budget Information: ${JSON.stringify(budgetInfo, null, 2)}`);
+
+/**
+ * --------------------------------------- Type Aliases ---------------------------------------
+ */
+
+// Log a message to the console
+console.log("\n--- Meeting Information ---");
+
+// Define a type alias for meeting status
+type MeetingStatus = "scheduled" | "in progress" | "completed" | "canceled";
+
+// Define a type alias for meeting information
+type MeetingInfo = {
+  title: string;
+  date: Date;
+  attendees: string[];
+  status: MeetingStatus;
+};
+
+// Create an object to store meeting information
+let teamMeeting: MeetingInfo = {
+  title: "Team Sync",
+  date: new Date(),
+  attendees: ["John Doe", "Alice", "Bob", "Charlie"],
+  status: "scheduled",
+};
+
+// Log the meeting information to the console
+console.log(`Meeting Information: ${JSON.stringify(teamMeeting, null, 2)}`);
