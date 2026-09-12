@@ -1,5 +1,5 @@
 /**
- * Type Annotations & Variable Declarations
+ * --------------------------------------- Type Annotations & Variable Declarations ---------------------------------------
  */
 
 // Check if TypeScript is working
@@ -43,7 +43,7 @@ console.log(
 );
 
 /**
- * Functions
+ * --------------------------------------- Functions ---------------------------------------
  */
 
 // Function to calculate annual salary based on monthly salary and optional monthly bonus
@@ -77,7 +77,7 @@ console.log(
 );
 
 /**
- * Arrays, Tuples, and Objects
+ * --------------------------------------- Arrays, Tuples, and Objects ---------------------------------------
  */
 
 // Log a message to the console
@@ -128,14 +128,14 @@ console.log(
 );
 
 /**
- * Interfaces
+ * --------------------------------------- Interfaces ---------------------------------------
  */
 
 // Log a message to the console
 console.log("\n--- Department Information ---");
 
 // Define an interface for a department
-interface department {
+interface Department {
   name: string;
   manager: string;
   employees: string[];
@@ -143,21 +143,21 @@ interface department {
 }
 
 // Create objects for different departments using the department interface
-let engineeringDepartment: department = {
+let engineeringDepartment: Department = {
   name: "Engineering",
   manager: "Smith",
   employees: ["John Doe", "Alice", "Bob"],
   isHiring: true,
 };
 
-let hrDepartment: department = {
+let hrDepartment: Department = {
   name: "Human Resources",
   manager: "Johnson",
   employees: ["Charlie", "David"],
   isHiring: false,
 };
 
-let financeDepartment: department = {
+let financeDepartment: Department = {
   name: "Finance",
   manager: "Williams",
   employees: ["Eve", "Frank"],
@@ -173,3 +173,33 @@ console.log(
 console.log(
   `Finance Department: ${JSON.stringify(financeDepartment, null, 2)}`,
 );
+
+/**
+ * --------------------------------------- Enums ---------------------------------------
+ */
+
+// Log a message to the console
+console.log("\n--- Budget Information ---");
+
+// Define an enum for budget categories
+enum BudgetCategory {
+  Marketing = "Marketing",
+  ResearchAndDevelopment = "Research and Development",
+  Operations = "Operations",
+  HumanResources = "Human Resources",
+  Finance = "Finance",
+}
+
+// Create an object to store budget information for different categories
+let budgetInfo: {
+  category: BudgetCategory;
+  allocatedAmount: number;
+  spentAmount: number;
+} = {
+  category: BudgetCategory.Marketing,
+  allocatedAmount: 10000,
+  spentAmount: 5000,
+};
+
+// Log the budget information to the console
+console.log(`Budget Information: ${JSON.stringify(budgetInfo, null, 2)}`);
