@@ -224,7 +224,7 @@ type MeetingInfo = {
 
 // Create an object to store meeting information
 let teamMeeting: MeetingInfo = {
-  title: "Team Sync",
+  title: "Budget Planning Meeting",
   date: new Date(),
   attendees: ["John Doe", "Alice", "Bob", "Charlie"],
   status: "scheduled",
@@ -232,3 +232,40 @@ let teamMeeting: MeetingInfo = {
 
 // Log the meeting information to the console
 console.log(`Meeting Information: ${JSON.stringify(teamMeeting, null, 2)}`);
+
+/**
+ * --------------------------------------- Union & Intersection Types ---------------------------------------
+ */
+
+// Log a message to the console
+console.log("\n--- Project Information ---");
+
+// const
+
+interface Project {
+  projectName: string;
+  projectId: string;
+  projectType: "internal" | "external";
+  startDate: Date;
+  endDate: Date;
+  budget: number;
+  comments?: string;
+}
+
+interface Client {
+  clientName: string;
+  clientId: string;
+}
+
+// Create an object that combines both Project and Client interfaces using intersection types
+let projectWithClient: Project & Client = {
+  projectName: "ABC E-commerce Website",
+  projectId: "project-001",
+  projectType: "external",
+  startDate: new Date(),
+  endDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // Adding 30 days in milliseconds
+  budget: 10000,
+  comments: "Should be completed within deadline.",
+  clientName: "Robert",
+  clientId: "client-001",
+};
