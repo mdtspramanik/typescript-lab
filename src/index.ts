@@ -269,3 +269,8 @@ let projectWithClient: Project & Client = {
   clientName: "Robert",
   clientId: "client-001",
 };
+
+// Log the project with client information to the console
+console.log(
+  `Project with Client Information: ${JSON.stringify(projectWithClient, null, 2)}`,
+);
