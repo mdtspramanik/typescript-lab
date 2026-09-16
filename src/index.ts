@@ -240,12 +240,10 @@ console.log(`Meeting Information: ${JSON.stringify(teamMeeting, null, 2)}`);
 // Log a message to the console
 console.log("\n--- Project Information ---");
 
-// const
-
 interface Project {
   projectName: string;
   projectId: string;
-  projectType: "internal" | "external";
+  projectType: "internal" | "external"; // Using union type for "projectType" variable
   startDate: Date;
   endDate: Date;
   budget: number;
