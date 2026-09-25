@@ -272,3 +272,44 @@ let projectWithClient: Project & Client = {
 console.log(
   `Project with Client Information: ${JSON.stringify(projectWithClient, null, 2)}`,
 );
+
+/**
+ * --------------------------------------- Classes ---------------------------------------
+ */
+
+console.log("\n--- Employee Salary Information ---");
+
+class Employee {
+  public name: string; // Can be accessed and modified from outside the class
+  readonly employeeId: string; // Can be accessed from outside the class but cannot be modified
+  private monthlySalary: number; // Can only be accessed and modified from within the class
+
+  // Define a constructor to initialize the properties
+  constructor(name: string, employeeId: string, monthlySalary: number) {
+    this.name = name;
+    this.employeeId = employeeId;
+    this.monthlySalary = monthlySalary;
+  }
+
+  get salary(): number {
+    return this.monthlySalary;
+  }
+
+  set salary(newSalary: number) {
+    if (newSalary < 0) {
+      throw new Error("Salary cannot be negative.");
+    }
+    this.monthlySalary = newSalary;
+  }
+}
+
+const employee1 = new Employee("John Doe", "EMP001", 1200);
+const employee2 = new Employee("Alice", "EMP002", 1500);
+const employee3 = new Employee("Bob", "EMP003", 1800);
+
+// Log the employee's salary information to the console
+console.log(
+  `Employee Name: ${employee1.name}, Employee ID: ${employee1.employeeId}, Monthly Salary: $${employee1.salary}`,
+  `\nEmployee Name: ${employee2.name}, Employee ID: ${employee2.employeeId}, Monthly Salary: $${employee2.salary}`,
+  `\nEmployee Name: ${employee3.name}, Employee ID: ${employee3.employeeId}, Monthly Salary: $${employee3.salary}`,
+);
