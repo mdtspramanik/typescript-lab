@@ -291,10 +291,12 @@ class Employee {
     this.monthlySalary = monthlySalary;
   }
 
+  // Getter method to retrieve the monthly salary
   get salary(): number {
     return this.monthlySalary;
   }
 
+  // Setter method to update the monthly salary with validation
   set salary(newSalary: number) {
     if (newSalary < 0) {
       throw new Error("Salary cannot be negative.");
@@ -306,6 +308,9 @@ class Employee {
 const employee1 = new Employee("John Doe", "EMP001", 1200);
 const employee2 = new Employee("Alice", "EMP002", 1500);
 const employee3 = new Employee("Bob", "EMP003", 1800);
+
+// Update the salary for employee3
+employee3.salary = 2000;
 
 // Log the employee's salary information to the console
 console.log(
